@@ -322,6 +322,7 @@ Parameters that are enabled by default have to be explicitly disabled. These (cu
 | `cpu_text`<br>`gpu_text`           | Override CPU and GPU text                                                             |
 | `custom_text_center`               | Display a custom text centered useful for a header e.g `custom_text_center=FlightLessMango Benchmarks` |
 | `custom_text`                      | Display a custom text e.g `custom_text=Fsync enabled`                                 |
+| `engine_short_names`               | Display a short version of the used engine (i.e. `OGL` instead of `OpenGL`)           |
 | `engine_version`                   | Display OpenGL or vulkan and vulkan-based render engine's version                     |
 | `exec`                             | Display output of bash command in next column, e.g `custom_text=/home` , `exec=df -h /home \| tail -n 1`. Only works with `legacy_layout=0` |
 | `exec_name`                        | Display current exec name                                                             |
@@ -332,9 +333,11 @@ Parameters that are enabled by default have to be explicitly disabled. These (cu
 | `font_scale_media_player`          | Change size of media player text relative to `font_size`                              |
 | `font_size=`                       | Customizeable font size. Default is `24`                                              |
 | `font_size_text=`                  | Customizeable font size for other text like media metadata. Default is `24`           |
+| `fps_color_change`                 | Change the FPS text color depepending on the FPS                                      |
 | `fps_limit_method`                 | If FPS limiter should wait before or after presenting a frame. Choose `late` (default) for the lowest latency or `early` for the smoothest frametimes |
 | `fps_limit`                        | Limit the apps framerate. Comma-separated list of one or more FPS values. `0` means unlimited |
 | `fps_only`                         | Show FPS only. ***Not meant to be used with other display params***                   |
+| `fps_sampling_period=`             | Time interval between two sampling points for gathering the FPS in milliseconds. Default is `500`   |
 | `frame_count`                      | Display frame count                                                                   |
 | `frametime`                        | Display frametime next to FPS text                                                    |
 | `full`                             | Enable most of the toggleable parameters (currently excludes `histogram`)             |
@@ -376,6 +379,9 @@ Parameters that are enabled by default have to be explicitly disabled. These (cu
 | `show_fps_limit`                   | Display the current FPS limit                                                         |
 | `swap`                             | Display swap space usage next to system RAM usage                                     |
 | `table_columns`                    | Set the number of table columns for ImGui, defaults to 3                              |
+| `text_outline`                     | Draw an outline around text for better readability. Enabled by default.               |
+| `text_outline_color=`              | Set the color of `text_outline`. Default = `0x000000`                                 |
+| `text_outline_thickness=`          | Set the thickness of `text_outline`. Default = `1.5`                                  |
 | `throttling_status`                | Show if GPU is throttling based on Power, current, temp or "other" (Only shows if throttling is currently happening). Currently disabled by default for Nvidia as it causes lag on 3000 series |
 | `time`<br>`time_format=%T`         | Display local time. See [std::put_time](https://en.cppreference.com/w/cpp/io/manip/put_time) for formatting help. NOTE: Sometimes apps may set `TZ` (timezone) environment variable to UTC/GMT |
 | `toggle_fps_limit`                 | Cycle between FPS limits. Defaults to `Shift_L+F1`                                    |
