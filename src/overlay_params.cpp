@@ -619,7 +619,7 @@ static void set_param_defaults(struct overlay_params *params){
    params->width = 0;
    params->height = 140;
    params->control = -1;
-   params->fps_limit = { 0 };
+   params->fps_limit = 0;
    params->fps_limit_method = FPS_LIMIT_METHOD_LATE;
    params->vsync = -1;
    params->gl_vsync = -2;
@@ -641,11 +641,11 @@ static void set_param_defaults(struct overlay_params *params){
    params->text_color = 0xffffff;
    params->media_player_color = 0xffffff;
    params->media_player_name = "";
-   params->font_scale = 1.0f;
+   params->font_scale = 1.0;
    params->wine_color = 0xeb5b5b;
    params->gpu_load_color = { 0x39f900, 0xfdfd09, 0xb22222 };
    params->cpu_load_color = { 0x39f900, 0xfdfd09, 0xb22222 };
-   params->font_scale_media_player = 0.55f;
+   params->font_scale_media_player = 0.55;
    params->log_interval = 0;
    params->media_player_format = { "{title}", "{artist}", "{album}" };
    params->permit_upload = 0;
@@ -778,7 +778,7 @@ parse_overlay_config(struct overlay_params *params,
       return;
 
    if (params->font_scale_media_player <= 0.f)
-      params->font_scale_media_player = 0.55f;
+      params->font_scale_media_player = 0.55;
 
    // Convert from 0xRRGGBB to ImGui's format
    std::array<unsigned *, 21> colors = {
