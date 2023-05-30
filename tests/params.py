@@ -6,7 +6,7 @@ class Test:
         self.options = {}
         self.error_count = 0
         self.ignore_params = ["pci_dev", "mangoapp_steam", "fsr_steam_sharpness",
-                              "ouput_file", "read_cfg"]
+                              "output_file", "read_cfg"]
         # self.files_changed()
         self.get_options()
         self.get_param_defaults()
