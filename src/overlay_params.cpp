@@ -619,7 +619,7 @@ static void set_param_defaults(struct overlay_params *params){
    params->width = 0;
    params->height = 140;
    params->control = -1;
-   params->fps_limit = 0;
+   params->fps_limit = { 0 };
    params->fps_limit_method = FPS_LIMIT_METHOD_LATE;
    params->vsync = -1;
    params->gl_vsync = -2;
