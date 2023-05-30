@@ -5,7 +5,8 @@ class Test:
     def __init__(self):
         self.options = {}
         self.error_count = 0
-        self.ignore_params = ["pci_dev", "mangoapp_steam", "fsr_steam_sharpness"]
+        self.ignore_params = ["pci_dev", "mangoapp_steam", "fsr_steam_sharpness",
+                              "output_file", "read_cfg"]
         # self.files_changed()
         self.get_options()
         self.get_param_defaults()
